@@ -1,0 +1,35 @@
+<form #signUpForm="ngForm" (ngSubmit)="signUpForm.valid && onSubmit(signUpForm)">
+    <input type="text" #fullName="ngModel" [(ngModel)]="dataService.selectedUser.POLE" name="POLE"
+        placeholder="Enter POLE">
+
+    <input type="text" #password="ngModel" [(ngModel)]="dataService.selectedUser.NOMDUTILISATEUR" name="NOMDUTILISATEUR"
+        placeholder="NOM D'UTILISATEUR">
+    <input type="text" #password="ngModel" [(ngModel)]="dataService.selectedUser.PRODUIT" name="PRODUIT"
+        placeholder="PRODUIT">
+    <input type="text" #password="ngModel" [(ngModel)]="dataService.selectedUser.NDESERIE" name="NDESERIE"
+        placeholder="N°DE SERIE">
+    <input type="text" #password="ngModel" [(ngModel)]="dataService.selectedUser.UTILITE" name="UTILITE"
+        placeholder="UTILITE">
+    <input type="text" #password="ngModel" [(ngModel)]="dataService.selectedUser.PROJET" name="PROJET"
+        placeholder="PROJET">
+    <input type="text" #password="ngModel" [(ngModel)]="dataService.selectedUser.ENCOURSDUTILISATION"
+        name="ENCOURSDUTILISATION" placeholder="EN COURS D'UTILISATION">
+    <input type="text" #password="ngModel" [(ngModel)]="dataService.selectedUser.MAGASIN" name="MAGASIN"
+        placeholder="MAGASIN">
+    <input type="text" #password="ngModel" [(ngModel)]="dataService.selectedUser.REBUT" name="REBUT"
+        placeholder="REBUT">
+    <input type="text" #password="ngModel" [(ngModel)]="dataService.selectedUser.DATEENTREE" name="DATEENTREE"
+        placeholder="DATE ENTREE">
+    <input type="text" #password="ngModel" [(ngModel)]="dataService.selectedUser.PROVENANCE" name="PROVENANCE"
+        placeholder="PROVENANCE">
+    <input type="text" #password="ngModel" [(ngModel)]="dataService.selectedUser.LivraisonPar" name="LivraisonPar"
+        placeholder="Livraison Par">
+    <input type="text" #password="ngModel" [(ngModel)]="dataService.selectedUser.DATESORTIE" name="DATESORTIE"
+        placeholder="DATE SORTIE">
+    <input type="text" #password="ngModel" [(ngModel)]="dataService.selectedUser.DESTINATION" name="DESTINATION"
+        placeholder="DESTINATION">
+    <input type="text" #password="ngModel"
+        [(ngModel)]="dataService.selectedUser.PersonnelResponsabledelequipementSortie"
+        name="PersonnelResponsabledelequipementSortie" placeholder="Personnel Responsable de l'equipement Sortie">
+        <input type="submit"  value="ADD">
+</form>

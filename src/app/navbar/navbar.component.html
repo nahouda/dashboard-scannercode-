@@ -1,0 +1,67 @@
+<mat-toolbar >
+        <mat-toolbar-row>
+          <button mat-icon-button>
+            <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+          </button>
+          <h1>ScannerCode</h1>
+          <span class="menu-spacer"></span>
+          <div>
+            <a mat-button [routerLink]="'/dashboard'"><i class="fa fa-barcode" style="font-size:30px"></i>
+
+              Dashboard</a>
+            <a mat-button [routerLink]="'/userprofile'" > <i class="fa fa-fw fa-child"></i>userprofile </a>
+            <a mat-button [routerLink]="'/contacts'"> <i class="fa fa-id-card-o" aria-hidden="true"></i>Contacts </a>
+            <a mat-button [routerLink]="'/data'" (click)="data()" > <i class="fa fa-database"></i>Data </a>
+
+            <a mat-button (click)="sidenav.toggle()" href=""   style="top: 30%; left: 220%"> <i class="fa fa-fw fa-user"></i>LogOut </a>
+      
+          </div>
+        </mat-toolbar-row>
+      
+       
+      </mat-toolbar>
+      <mat-sidenav-container >
+            <mat-sidenav #sidenav [opened]="!(isHandset$ | async)">
+              <div><img src="assets/img/sagemm.jpg" alt="Sagemcom" width="250px"></div>
+              <mat-nav-list>
+          
+                <a mat-list-item [routerLink]="'/dashboard'">  <i class="fa fa-barcode" style="font-size:30px"></i>Dashboard</a>
+                <a mat-list-item [routerLink]="'/userprofile'" (click)="nav()"> <i class="fa fa-fw fa-child"></i>userprofile </a>
+                <a mat-list-item [routerLink]="'/contacts'"> <i class="fa fa-id-card-o" aria-hidden="true"></i> Contacts </a>
+                <a mat-list-item [routerLink]="'/data'" > <i class="fa fa-database"></i> Data </a>
+                <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item > <i class="fa fa-fw fa-user"></i> LogOut</a>
+          
+              </mat-nav-list>
+            </mat-sidenav>
+            <mat-sidenav-content>
+              <div style="height: 90vh;">
+          <app-dashboard></app-dashboard>
+                <!-- <router-outlet></router-outlet> -->
+              </div>
+            </mat-sidenav-content>
+          </mat-sidenav-container>
+          <footer class="footer ">
+            <div class="container-fluid">
+                <nav class="pull-left">
+                    <ul>
+                        <li>
+                            <a href="https://www.sagemcom.com/fr/">
+                                SagemCom
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/SagemcomOfficial">
+                                About Us
+                            </a>
+                        </li>
+                        
+                      
+                    </ul>
+                </nav>
+                <div class="copyright pull-right">
+                  <i class="fa fa-barcode" style="font-size:65px"></i>
+                   
+                </div>
+            </div>
+        </footer>
+        

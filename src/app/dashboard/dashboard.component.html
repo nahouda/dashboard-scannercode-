@@ -1,0 +1,47 @@
+<div>
+<input type="text" #NDESERIE="ngModel" [(ngModel)]="searchdataDetails" name="NDESERIE" placeholder="N°DE SERIE" >
+<input type="submit" (click)="search()"value="SEARCH"></div>
+
+<input type="submit"(click)="add()"value="ADD">
+<table class="table-fill">
+    <thead>
+        <tr>
+            <th class="text-center">POLE</th>
+            <th class="text-center">NOM D'UTILISATEUR</th>
+            <th class="text-center">PRODUIT</th>
+            <th class="text-center"> N°DE SERIE</th>
+            <th class="text-center">UTILITE</th>
+            <th class="text-center">PROJET</th>
+            <th class="text-center">EN COURS D'UTILISATION</th>
+            <th class="text-center">MAGASIN</th>
+            <th class="text-center">REBUT</th>
+            <th class="text-center">DATE ENTREE</th>
+            <th class="text-center">PROVENANCE</th>
+            <th class="text-center">Livraison Par</th>
+            <th class="text-center">DATE SORTIE</th>
+            
+            <th class="text-center">DESTINATION</th>
+            <th class="text-center">Personnel Responsable de l'equipement Sortie</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr *ngFor="let row of searchResult">
+                <td>{{row.POLE}}</td>
+                <td>{{row.NOMDUTILISATEUR}}</td>
+                <td>{{row.PRODUIT}}</td>
+                <td>{{row. NDESERIE}}</td>
+                <td>{{row.UTILITE}}</td>
+                <td>{{row.PROJET}}</td>
+                <td>{{row.ENCOURSDUTILISATION}}</td>
+                <td>{{row.MAGASIN}}</td>
+                <td>{{row.REBUT}}</td>
+                <td>{{row.DATEENTREE}}</td>
+                <td>{{row.PROVENANCE}}</td>
+                <td>{{row.LivraisonPar}}</td>
+                <td>{{row.DATESORTIE}}</td>
+                <td>{{row.DESTINATION}}</td>
+                <td>{{row.PersonnelResponsabledelequipementSortie}}</td>
+            </tr>
+            
+    </tbody>
+</table>
